@@ -17,9 +17,6 @@ Este es un proyecto que implementa una API en **Python-Flask**, la cual interact
 - **init_db.py**           # Inicialización de la base de datos con Flask-SQLAlchemy.
 - **requirements.txt**     # Dependencias necesarias para la app
 
-shell
-Copiar
-
 ## Instrucciones para correr el proyecto
 
 ### 1. Clona el repositorio
