@@ -10,12 +10,12 @@ Este es un proyecto que implementa una API en **Python-Flask**, la cual interact
 
 ## Estructura del Proyecto
 
-- app.py               # Código principal de la API en Flask
-- config.py            # Configuración para la conexión con PostgreSQL.
-- docker-compose.yml   # Configuración de Docker Compose para los contenedores de la app y la base de datos.
-- Dockerfile           # Dockerfile para crear la imagen del contenedor de la app.
-- init_db.py           # Inicialización de la base de datos con Flask-SQLAlchemy.
-- requirements.txt     # Dependencias necesarias para la app
+- **app.py**               # Código principal de la API en Flask
+- **config.py**            # Configuración para la conexión con PostgreSQL.
+- **docker-compose.yml**   # Configuración de Docker Compose para los contenedores de la app y la base de datos.
+- **Dockerfile**           # Dockerfile para crear la imagen del contenedor de la app.
+- **init_db.py**           # Inicialización de la base de datos con Flask-SQLAlchemy.
+- **requirements.txt**     # Dependencias necesarias para la app
 
 shell
 Copiar
