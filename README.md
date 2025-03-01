@@ -32,8 +32,8 @@ Primero, clona el repositorio en tu máquina local:
 
 Este proyecto utiliza **Docker** y **Docker Compose** para orquestar la app y la base de datos. Puedes construir y ejecutar los contenedores con el siguiente comando:
 
-    ```bash
-    docker-compose up --build
+     ```bash
+     docker-compose up --build
 
 Este comando realizará lo siguiente:
 
