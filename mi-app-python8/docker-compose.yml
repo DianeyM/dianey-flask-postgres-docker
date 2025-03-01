@@ -1,0 +1,33 @@
+services:
+  web:
+    build: . #Se le indica a Docker que debe construir la imagen del contenedor usando un Dockerfile ubicado en el directorio actual.
+    container_name: dianey-mi-app-python-docker6
+    ports:
+      - "5006:5000"
+    environment: #Define las variables de entorno para la aplicación
+      - FLASK_ENV=development
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/students_db
+      #*postgresql://: Esto indica que se usará el protocolo de conexión PostgreSQL. *postgres: El nombre de usuario para conectarse a la
+      #base de datos.*postgres: La contraseña para el usuario de la base de datos. *db: El host de la base de datos, en este caso es db.
+      #Esto es posible porque Docker Compose crea una red interna en la que los servicios pueden comunicarse por nombre. *5432: El puerto
+      #en el que el servicio de PostgreSQL está escuchando, el puerto por defecto para PostgreSQL es 5432. *students_db: El nombre de la 
+      #base de datos a la que debe hacer la conexión. 
+    depends_on:
+      - db  # Esto asegura que PostgreSQL se inicie antes que la app de Flask
+
+  db:
+    image: postgres:13-alpine  # Usamos una imagen oficial de PostgreSQL
+    container_name: postgres_db_docker
+    environment:
+      POSTGRES_USER: postgres  # Usuario de PostgreSQL
+      POSTGRES_PASSWORD: postgres  # Contraseña de PostgreSQL
+      POSTGRES_DB: students_db  # Base de datos que se creará al iniciar
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  #Volumen para persistir los datos de la base de datos. *postgres_data: Es el nombre del 
+      #volumen. * /var/lib/postgresql/data: Es la ubicación interna dentro del contenedor de PostgreSQL donde se almacenan los datos de la
+      #base de datos.
+    ports:
+      - "5432:5432"  # Exponemos el puerto 5432 para conectarnos a PostgreSQL
+
+volumes:
+  postgres_data:  # Definimos un volumen persistente para la base de datos
