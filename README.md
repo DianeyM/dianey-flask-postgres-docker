@@ -87,8 +87,8 @@ Este comando te permitirá ver la salida de los logs tanto de la app como de la 
 
 Para detener los contenedores, puedes ejecutar:
 
-   ```bash
-   docker-compose down    
+    ```bash
+    docker-compose down       
 
 Este comando detendrá y eliminará los contenedores, pero los datos de PostgreSQL se mantendrán persistentes gracias al volumen configurado.
 
