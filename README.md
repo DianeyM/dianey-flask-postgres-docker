@@ -1,5 +1,7 @@
 # Proyecto Flask Dockerizado con PostgreSQL
 
+**CLARIDAD CLAVE**: Hay dos versiones de este proyecto: mi-app-python6 y mi-app-python8. La **versión estable es mi-app-python8**. mi-app-python6 tiene un problema en el archivo app.py porque no tiene el código que activa la creación de la tabla Students. 
+
 Este es un proyecto que implementa una API en **Python-Flask**, la cual interactúa con una base de datos **PostgreSQL**. El proyecto está dockerizado para facilitar su despliegue y ejecución en cualquier entorno.
 
 ## Requisitos
@@ -122,5 +124,3 @@ Si realizas cambios en el código, es posible que necesites reconstruir los cont
 
 docker-compose up --build
 
-markdown
-Copiar
