@@ -74,6 +74,9 @@ Se pueden ejecutar los siguientes comandos para probar la funcionalidad completa
 - curl -X PATCH http://localhost:5006/students -H "Content-Type: application/json" -d '{"id": 3, "nombre": "Luis Roa", "carrera": "Fisica cuantica"}'
 - curl -X PATCH http://localhost:5006/students -H "Content-Type: application/json" -d '{"id": 3}'
 
+**3.5.Ver los estudiantes en la Base de Datos:**:
+- curl localhost:5006/students
+
 ### 4. Ver los logs de los contenedores
 
 Puedes ver los logs de los contenedores con el siguiente comando:
