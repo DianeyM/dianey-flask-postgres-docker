@@ -75,9 +75,6 @@ Puedes ver los logs de los contenedores con el siguiente comando:
 
 docker-compose logs -f
 
-csharp
-Copiar
-
 Este comando te permitirá ver la salida de los logs tanto de la app como de la base de datos.
 
 ### 5. Detener los contenedores
