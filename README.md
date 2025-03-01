@@ -25,17 +25,11 @@ Primero, clona el repositorio en tu máquina local:
 
 git clone https://github.com/tu-usuario/tu-repositorio.git cd tu-repositorio
 
-markdown
-Copiar
-
 ### 2. Construir y ejecutar los contenedores con Docker Compose
 
 Este proyecto utiliza **Docker** y **Docker Compose** para orquestar la app y la base de datos. Puedes construir y ejecutar los contenedores con el siguiente comando:
 
 docker-compose up --build
-
-markdown
-Copiar
 
 Este comando realizará lo siguiente:
 
@@ -48,9 +42,6 @@ Este comando realizará lo siguiente:
 Una vez que los contenedores estén en ejecución, la API estará disponible en:
 
 http://localhost:5006
-
-markdown
-Copiar
 
 Puedes acceder a los siguientes endpoints de la API:
 
@@ -94,9 +85,6 @@ Este comando te permitirá ver la salida de los logs tanto de la app como de la 
 Para detener los contenedores, puedes ejecutar:
 
 docker-compose down
-
-markdown
-Copiar
 
 Este comando detendrá y eliminará los contenedores, pero los datos de PostgreSQL se mantendrán persistentes gracias al volumen configurado.
 
