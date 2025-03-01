@@ -1,16 +1,21 @@
 # Proyecto Flask Dockerizado con PostgreSQL
 
-Este es un proyecto que implementa una API en **Python-Flask** que interactúa con una base de datos **PostgreSQL**. El proyecto está dockerizado para facilitar su despliegue y ejecución en cualquier entorno.
+Este es un proyecto que implementa una API en **Python-Flask**, la cual interactúa con una base de datos **PostgreSQL**. El proyecto está dockerizado para facilitar su despliegue y ejecución en cualquier entorno.
 
 ## Requisitos
 
-- Docker
-- Docker Compose
-- Python 3.9 o superior (si deseas correrlo sin Docker)
+- Docker.
+- Docker Compose.
+- Python 3.9 o superior.
 
 ## Estructura del Proyecto
 
-. ├── app.py # Código principal de la API en Flask ├── config.py # Configuración para la conexión con PostgreSQL ├── docker-compose.yml # Configuración de Docker Compose para los contenedores de la app y la base de datos ├── Dockerfile # Dockerfile para crear la imagen del contenedor de la app ├── init_db.py # Inicialización de la base de datos con Flask-SQLAlchemy ├── requirements.txt # Dependencias necesarias para la app
+- app.py               # Código principal de la API en Flask
+- config.py            # Configuración para la conexión con PostgreSQL.
+- docker-compose.yml   # Configuración de Docker Compose para los contenedores de la app y la base de datos.
+- Dockerfile           # Dockerfile para crear la imagen del contenedor de la app.
+- init_db.py           # Inicialización de la base de datos con Flask-SQLAlchemy.
+- requirements.txt     # Dependencias necesarias para la app
 
 shell
 Copiar
@@ -52,10 +57,29 @@ Copiar
 
 Puedes acceder a los siguientes endpoints de la API:
 
+- **GET /**: Mostrar un mensaje: !Hola desde un contenedor Docker con Python y Flask!.
 - **GET /students**: Obtener la lista de todos los estudiantes.
 - **POST /students**: Crear un nuevo estudiante.
 - **DELETE /students**: Eliminar un estudiante por su ID.
 - **PATCH /students**: Actualizar la información de un estudiante.
+
+Se pueden ejecutar los siguientes comandos para probar la funcionalidad completa de la aplicación multicontenedor: 
+
+**3.1.Ver el mensaje !Hola desde un contenedor Docker con Python y Flask!**:
+- curl localhost:5006/
+  
+**3.2.Ver los estudiantes en la Base de Datos. Que en un inicio está vacia:**:
+- curl localhost:5006/students
+  
+**3.3.Alimentar la base de datos con tres estudiantes:**:
+- curl -X POST http://localhost:5006/students -H "Content-Type: application/json" -d '{"id": 1, "nombre": "Dianey Macias", "edad": 30, "carrera": "Ing. Sistemas"}'
+- curl -X POST http://localhost:5006/students -H "Content-Type: application/json" -d '{"id": 2, "nombre": "Ana Gomez R", "edad": 21, "carrera": "Matematicas"}'
+- curl -X POST http://localhost:5006/students -H "Content-Type: application/json" -d '{"id": 3, "nombre": "Luis", "edad": 23, "carrera": "Fisica"}'
+  
+**3.4.Actualizar algunos datos de un estudiante:**:
+- curl -X PATCH http://localhost:5006/students -H "Content-Type: application/json" -d '{"id": 3, "edad": 25}'
+- curl -X PATCH http://localhost:5006/students -H "Content-Type: application/json" -d '{"id": 3, "nombre": "Luis Roa", "carrera": "Fisica cuantica"}'
+- curl -X PATCH http://localhost:5006/students -H "Content-Type: application/json" -d '{"id": 3}'
 
 ### 4. Ver los logs de los contenedores
 
@@ -113,3 +137,8 @@ Si la aplicación no puede conectarse a la base de datos, asegúrate de que Dock
 ### Cambios en el código
 
 Si realizas cambios en el código, es posible que necesites reconstruir los contenedores:
+
+docker-compose up --build
+
+markdown
+Copiar
