@@ -42,6 +42,11 @@ Este comando realizará lo siguiente:
 - Descargar e inicializará la imagen de PostgreSQL.
 - Ejecutará ambos contenedores (la aplicación y la base de datos) con los puertos configurados.
 
+Luego se puede precional control + C y: 
+
+ ```bash
+     docker-compose up -d
+
 ### 3. Acceder a la API
 
 Una vez que los contenedores estén en ejecución, la API estará disponible en:
