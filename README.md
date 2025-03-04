@@ -133,7 +133,6 @@ Si la aplicación no puede conectarse a la base de datos, asegúrate de que Dock
 
 Si realizas cambios en el código, es posible que necesites reconstruir los contenedores:
 
-   ```
    docker-compose up --build
 
 ### Localhost si se usa una máquina virtual y se dokeriza en el interior de la misma:
