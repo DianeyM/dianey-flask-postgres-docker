@@ -133,8 +133,11 @@ Si la aplicación no puede conectarse a la base de datos, asegúrate de que Dock
 
 Si realizas cambios en el código, es posible que necesites reconstruir los contenedores:
 
+   ```
    docker-compose up --build
 
 ### Localhost si se usa una máquina virtual y se dokeriza en el interior de la misma:
 
-Para acceder a los Endpoints desde la máquina física no use: - curl localhost:5006/students, en su lugar use: http://IP_DE_MÁQUINA_VIRTUAL:5006/students. Porque la IP de la máquina virtual es la que direcciona al docker. Para tal fin, debe deteminar la ip de su máquina virual.
+Para acceder a los Endpoints desde la máquina física no use: - curl localhost:5006/students, en su lugar use: http://IP_DE_MÁQUINA_VIRTUAL:5006/students. Porque la IP de la máquina virtual es la que direcciona al docker.
+
+Para tal fin, debe deteminar la ip de su máquina virual y haber instalado el sistema operativo de la máquina virtual en modo BRIDGE.
