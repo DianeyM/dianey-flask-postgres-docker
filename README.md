@@ -53,7 +53,7 @@ Puedes acceder a los siguientes endpoints de la API:
 - **GET /**: Mostrar un mensaje: !Hola desde un contenedor Docker con Python y Flask!.
 - **GET /students**: Obtener la lista de todos los estudiantes.
 - **POST /students**: Crear un nuevo estudiante.
-- **DELETE /students**: Eliminar un estudiante por su ID.
+- **DELETE /students**: Eliminar un estudiante por su ID y NOMBRE.
 - **PATCH /students**: Actualizar la información de un estudiante.
 
 Se pueden ejecutar los siguientes comandos para probar la funcionalidad completa de la aplicación multicontenedor: 
