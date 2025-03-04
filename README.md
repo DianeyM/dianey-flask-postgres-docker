@@ -32,7 +32,6 @@ Primero, clona el repositorio en tu máquina local:
 
 Este proyecto utiliza **Docker** y **Docker Compose** para orquestar la app y la base de datos. Puedes construir y ejecutar los contenedores con el siguiente comando, estando en el interior de la carpeta clonada:
 
-     ```bash
      docker-compose up --build
 
 Este comando realizará lo siguiente:
@@ -43,14 +42,12 @@ Este comando realizará lo siguiente:
 
 Luego se puede precional control + C y: 
 
-     ```bash
      docker-compose up -d
 
 ### 3. Acceder a la API
 
 Una vez que los contenedores estén en ejecución, la API estará disponible en:
 
-    ```bash
     http://localhost:5006
 
 Puedes acceder a los siguientes endpoints de la API:
@@ -89,7 +86,6 @@ Se pueden ejecutar los siguientes comandos para probar la funcionalidad completa
 
 Puedes ver los logs de los contenedores con el siguiente comando:
 
-    ```bash
     docker-compose logs -f
 
 Este comando te permitirá ver la salida de los logs tanto de la app como de la base de datos.
@@ -98,7 +94,6 @@ Este comando te permitirá ver la salida de los logs tanto de la app como de la 
 
 Para detener y eliminar los contenedores, puedes ejecutar:
 
-    ```bash
     docker-compose down       
 
 Este comando detendrá y eliminará los contenedores, pero los datos de PostgreSQL se mantendrán persistentes gracias al volumen configurado.
@@ -138,5 +133,4 @@ Si la aplicación no puede conectarse a la base de datos, asegúrate de que Dock
 
 Si realizas cambios en el código, es posible que necesites reconstruir los contenedores:
 
-   ```bash
    docker-compose up --build
