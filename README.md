@@ -92,7 +92,7 @@ Este comando te permitirá ver la salida de los logs tanto de la app como de la 
 
 ### 5. Detener los contenedores
 
-Para detener los contenedores, puedes ejecutar:
+Para detener y eliminar los contenedores, puedes ejecutar:
 
     ```bash
     docker-compose down       
