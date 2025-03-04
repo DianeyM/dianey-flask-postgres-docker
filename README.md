@@ -26,7 +26,7 @@ Este es un proyecto que implementa una API en **Python-Flask**, la cual interact
 
 Primero, clona el repositorio en tu máquina local:
 
-    ```bash
+    ```
     git clone https://github.com/DianeyM/dianey-flask-postgres-docker
 
 ### 2. Construir y ejecutar los contenedores con Docker Compose
@@ -140,4 +140,4 @@ Si la aplicación no puede conectarse a la base de datos, asegúrate de que Dock
 Si realizas cambios en el código, es posible que necesites reconstruir los contenedores:
 
    ```bash
-   git clone https://github.com/DianeyM/dianey-flask-postgres-docker
+   docker-compose up --build
