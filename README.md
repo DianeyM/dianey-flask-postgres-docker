@@ -44,7 +44,7 @@ Este comando realizará lo siguiente:
 
 Luego se puede precional control + C y: 
 
- ```bash
+     ```bash
      docker-compose up -d
 
 ### 3. Acceder a la API
